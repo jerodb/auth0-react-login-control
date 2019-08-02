@@ -7,8 +7,15 @@
     "prepublishOnly": "babel ./src --out-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": {
+    "name": "Jero db",
+    "email": "jero.db@live.com"
+  },
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/jerodb/auth0-react-login-control"
+  },
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
