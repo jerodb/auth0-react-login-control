@@ -11,7 +11,7 @@ This is to prevent conflicts with apps using this dependencies.
   
 &nbsp;
 ## How to use it
-- First you need to create an (Auth0 account)[https://auth0.com/]. There you will get the required credentials.
+- First you need to create an [Auth0 account](https://auth0.com/). There you will get the required credentials.
 
 - Import LoginControl component and place it where you want the login widget to be shown. You need to pass a config prop to LoginControl with an object containing the required Auth0 credentials and params. LoginControl component will automatically take care of starting, renewing and verifying the user session.
   
