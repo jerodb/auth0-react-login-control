@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Auth0Manager from '../../lib/Auth0Manager'
 import LoginControlComponent from './LoginControlComponent'
 
-function LoginControlContainer({ menuList = [], onLogOut = null, onSetSession = null }) {
-  const AuthManager = new Auth0Manager()
+function LoginControlContainer({ 
+  config, menuList = [], onLogOut = null, onSetSession = null 
+}) {
+  const AuthManager = new Auth0Manager(config)
 
   const isClient = typeof window !== 'undefined' && window.document
   const isLoggedIn = isClient ? localStorage.getItem('isLoggedIn') === 'true' : false
