@@ -1,1 +1,1 @@
-# auth0-react-login-control
+#Auth0 React Login Control

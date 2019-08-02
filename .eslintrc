@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "airbnb",
+  "globals": {
+    "document": true,
+    "window": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": 0,
+    "import/prefer-default-export": "off",
+    "max-len": "off",
+    "no-use-before-define": "off",
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "off",
+    "semi": [2, "never"]
+  }
+}
