@@ -1,21 +1,9 @@
 import auth0 from 'auth0-js'
 
-const AUTH_CLIENT_ID = 'ehvWV6IvuPlANICzvSOR6f2mZTt2h1rd'
-const AUTH_DOMAIN = 'playnews.auth0.com'
-const AUTH_RESPONSE_TYPE = 'token id_token'
-const AUTH_REDIRECT_URI = 'http://localhost:3000/auth/callback'
-const AUTH_SCOPE = 'openid profile email'
-
 export default class Auth {
-  auth0 = new auth0.WebAuth({
-    domain: AUTH_DOMAIN,
-    clientID: AUTH_CLIENT_ID,
-    redirectUri: AUTH_REDIRECT_URI,
-    responseType: AUTH_RESPONSE_TYPE,
-    scope: AUTH_SCOPE
-  })
+  constructor(args) {
+    this.auth0 = new auth0.WebAuth(args)
 
-  constructor() {
     this.login = this.login.bind(this)
     this.logout = this.logout.bind(this)
     this.handleAuthentication = this.handleAuthentication.bind(this)
