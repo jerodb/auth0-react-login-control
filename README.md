@@ -97,3 +97,10 @@ function YourComponent({ navigateToProfile }) {
 
 export default
 ```
+  
+&nbsp;
+## To Do
+
+- Finish configuration doc
+- Remove MUI
+- Add testing
