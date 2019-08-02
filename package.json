@@ -4,8 +4,6 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "yarn pre-build && webpack",
-    "pre-build": "if [ -d \"dist\" ]; then rm -R dist; fi && mkdir dist",
     "prepublishOnly": "babel ./src --out-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
