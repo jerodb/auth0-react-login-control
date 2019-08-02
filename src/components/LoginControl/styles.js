@@ -1,6 +1,4 @@
-import { makeStyles } from '@material-ui/styles'
-
-const styles = makeStyles({
+const styles = {
   activity: {
     display: 'flex',
     width: 50,
@@ -36,6 +34,6 @@ const styles = makeStyles({
     paddingRight: 10,
     paddingTop: 6,
   },
-})
+}
 
 export default styles

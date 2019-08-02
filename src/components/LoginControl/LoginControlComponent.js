@@ -7,8 +7,6 @@ import styles from './styles'
 const LoginControlComponent = ({
   isLoggedIn, login, logout, menuList, picture, userName
 }) => {
-  const classes = styles()
-
   if (picture && userName) {
     return (
       <LoggedIn
@@ -20,7 +18,7 @@ const LoginControlComponent = ({
     )
   }
   if (isLoggedIn) {
-    return (<div className={classes.activity}><Activity /></div>)
+    return (<div style={styles.activity}><Activity /></div>)
   }
 
   return <LoggedOut login={login} />
