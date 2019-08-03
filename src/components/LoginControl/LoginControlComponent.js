@@ -1,8 +1,7 @@
 import React from 'react'
-import Activity from './Activity'
 import LoggedIn from './LoggedInView'
 import LoggedOut from './LoggedOutView'
-import styles from './styles'
+import Spinner from './SpinnerView'
 
 const LoginControlComponent = ({
   isLoggedIn, login, logout, menuList, picture, userName
@@ -17,9 +16,7 @@ const LoginControlComponent = ({
       />
     )
   }
-  if (isLoggedIn) {
-    return (<div style={styles.activity}><Activity /></div>)
-  }
+  if (isLoggedIn) return <Spinner />
 
   return <LoggedOut login={login} />
 }

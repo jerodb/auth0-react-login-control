@@ -3,7 +3,6 @@ import IconButton from '@material-ui/core/IconButton'
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
-import styles from './styles'
 
 const LoggedInView = ({
   logout, menuList, picture, userName
@@ -31,7 +30,7 @@ const LoggedInView = ({
       >
         {
           (picture && <img style={styles.pic} src={picture} alt="" />)
-          || <AccountCircle />
+          || <AccountCircle style={styles.pic} />
         }
       </IconButton>
       <Menu
@@ -64,3 +63,32 @@ const LoggedInView = ({
 }
 
 export default LoggedInView
+
+const styles = {
+  iconButton: {
+    padding: 6,
+  },
+  pic: {
+    width: 40,
+    height: 40,
+    borderRadius: 50,
+  },
+  userMenu: {
+    backgroundColor: '#525252',
+    color: '#FFFFFF',
+    width: 120,
+    '& li': {
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+  },
+  userName: {
+    backgroundColor: '#777777',
+    borderBottom: '1px solid #CCCCCC',
+    fontSize: '1.1em',
+    paddingBottom: 6,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 6,
+  },
+}
