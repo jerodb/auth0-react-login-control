@@ -11,7 +11,7 @@ This is to prevent conflicts with apps using this dependencies.
   
 &nbsp;
 ## Auth0 credentials
-- You need to create an account with [Auth0](https://auth0.com/). Then from your Auth0 Dashboard you can get from the *Application Settings* section the aplication details you will need.
+- You need to create an account with [Auth0](https://auth0.com/). Then in your Auth0 Dashboard you can get from the *Application Settings* section the aplication details you will need.
   
 &nbsp;
 ## How to use it
