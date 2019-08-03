@@ -7,8 +7,7 @@ function LoginControlContainer({
 }) {
   const AuthManager = new Auth0Manager(config)
 
-  const isClient = typeof window !== 'undefined' && window.document
-  const isLoggedIn = isClient ? localStorage.getItem('isLoggedIn') === 'true' : false
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true'
 
   const [expiresAt, setExpiresAt] = useState('')
   const [picture, setPicture] = useState('')
