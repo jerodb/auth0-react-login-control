@@ -2,9 +2,16 @@
   "name": "auth0-react-login-control",
   "version": "1.0.0",
   "description": "",
+  "keywords": [
+    "react",
+    "auth0",
+    "authentication",
+    "login",
+    "react component"
+  ],
   "main": "dist/index.js",
   "scripts": {
-    "prepublishOnly": "babel ./src --out-dir ./dist",
+    "prepublish": "babel ./src --out-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
