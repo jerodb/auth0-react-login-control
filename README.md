@@ -1,6 +1,6 @@
 # Auth0 React Login Control
   
-Easily integrate Auth0 authentication to your site or web app.  
+Easily integrate Auth0 authentication to your React site or web app.  
   
 &nbsp;
 ## Installation
