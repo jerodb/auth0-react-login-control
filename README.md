@@ -1,5 +1,10 @@
 # Auth0 React Login Control
   
+Easly integrate Auth0 authentication to your site or web app.   
+A *Login* button is shown when no session has been started. When this button is touched the user is redirected to the Auth0's Login Panel.  
+If a session has been started the user's picture obtained from Auth0 or a default pic is shown. When this picture is touched a menu with a *Logout* button expands.  
+  
+&nbsp;
 ## Installation
 ```
 $ yarn add auth0-react-login-control
@@ -41,9 +46,6 @@ function YourComponent() {
 
 export default
 ```
-  
-If the user has a session started **LoginControl** component shows the user's picture obtained from Auth0 or a default pic if no picture exists. When this picture is touched a menu with a *Logout* button expands.  
-If no session has been started a *Login* button is shown. When this button is touched the user is redirected to the Auth0's Login Panel.
   
 - When the user is redirected back to your app after login, the **Callback** component has to be rendered. **Callback** component automatically catches the uri's hash returned by Auth0 and handles the user authentication. A new session is started and the user is redirected to the root location '/', in general this will be the home screen.
   
