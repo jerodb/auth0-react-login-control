@@ -123,7 +123,7 @@ const auth0Config = {
 
 function YourCallbackComponent() {
   const onSetSession = session => {
-    // **session** is the user/session info returned by Auth0 after successfully starting a session.
+    // session is the user/session info returned by Auth0 after successfully starting a session.
     // Here you can do what ever you need with the user/session info returned.
   }
 
@@ -152,7 +152,7 @@ const auth0Config = {
 
 function YourComponent({ navigateToProfile }) {
   const onSetSession = session => {
-    // **session** is the user/session info returned by Auth0 after renewing a session.
+    // session is the user/session info returned by Auth0 after renewing a session.
     // Here you do what ever you need with the user/session info returned.
   }
 
