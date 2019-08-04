@@ -74,10 +74,10 @@ export default CallbackComponent
 This is the minimum configuration needed to set this up.
   
 &nbsp;
-## More Configurations
+## Configurations
   
 ### Add extra options to the *user menu list*
-Just add the **menuList** prop to **LoginControl** as shown below.
+Include the **menuList** prop to **LoginControl** as shown below.
   
 ```
 import React from 'react'
@@ -109,18 +109,99 @@ export default
 ```
   
 &nbsp;
-### Prevent automatic redirect to root location '/' after login
+### Run code after a session is set
+### Also prevent automatic redirect to root location '/' after login
+Include the **onSetSession** prop to **Callback** as shown below. This prevents the automatic redirect so you should probably redirect the user manually from the callback screen to somewhere else in your app.
+  
+```
+import React from 'react'
+import { Callback } from 'auth0-react-login-control'
+
+const auth0Config = {
+  ...
+}
+
+function YourCallbackComponent() {
+  const onSetSession = session => {
+    // **session** is the user/session info returned by Auth0 after successfully starting a session.
+    // Here you can do what ever you need with the user/session info returned.
+  }
+
+  return (
+    <Callback
+      config={auth0Config}
+      onSetSession={onSetSession}
+    />
+  )
+}
+
+export default CallbackComponent
+```
   
 &nbsp;
-### Run code after a session is set
+### Run code after a session is renewed
+Include the **onSetSession** prop to **LoginControl** as shown below.
+  
+```
+import React from 'react'
+import { LoginControl } from 'auth0-react-login-control'
+
+const auth0Config = {
+  ...
+}
+
+function YourComponent({ navigateToProfile }) {
+  const onSetSession = session => {
+    // **session** is the user/session info returned by Auth0 after renewing a session.
+    // Here you do what ever you need with the user/session info returned.
+  }
+
+  return (
+    ...
+    <LoginControl
+      config={auth0Config}
+      onSetSession={onSetSession}
+    />
+    ...
+  )
+}
+
+export default
+```
   
 &nbsp;
 ### Run code after a session is finished
+Include the **onLogOut** prop to **LoginControl** as shown below.
+  
+```
+import React from 'react'
+import { LoginControl } from 'auth0-react-login-control'
+
+const auth0Config = {
+  ...
+}
+
+function YourComponent({ navigateToProfile }) {
+  const onLogOut = () => {
+    // Place here the code to run right after a session is finished.
+  }
+
+  return (
+    ...
+    <LoginControl
+      config={auth0Config}
+      onLogOut={onLogOut}
+    />
+    ...
+  )
+}
+
+export default
+```
     
 &nbsp;
 ## To Do
 
-- Finish configuration doc
+- Allow to easily customize some styles.
 - Remove MUI
 - Add testing
-- Allow to easily customize some styles.
