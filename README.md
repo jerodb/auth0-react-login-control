@@ -18,7 +18,7 @@ This is to prevent conflicts with apps using this dependencies.
   
 &nbsp;
 ## How to use it
-1) Import **LoginControl** component and place it where you want the login widget to be shown. You need to pass a **config** prop to **LoginControl** with an object containing the required Auth0 details.  
+1. Import **LoginControl** component and place it where you want the login widget to be shown. You need to pass a **config** prop to **LoginControl** with an object containing the required Auth0 details.  
 **LoginControl** component automatically takes care of starting, renewing and verifying the user's session.
   
 ```
@@ -49,7 +49,7 @@ export default
 If the user has a session started **LoginControl** component shows the user's picture obtained from Auth0 or a default pic if no picture exists. When this picture is touched a menu with a *Logout* button expands.  
 If no session has been started a *Login* button is shown. When this button is touched the user is redirected to the Auth0's Login Panel.
   
-2) When the user is redirected back to your app after login, you need to render the **Callback** component.  
+2. When the user is redirected back to your app after login, you need to render the **Callback** component.  
 **Callback** component automatically catches the uri's hash returned by Auth0 and handles the user authentication. A new session is started and the user is redirected to the root location '/' of your app or web, in general this will be the home screen.
   
 ```
@@ -197,6 +197,30 @@ function YourComponent({ navigateToProfile }) {
 }
 
 export default
+```
+  
+&nbsp;
+### Prevent using default **Callback** template when redirected back from Auth0
+**Callback** component shows a default template (a centered spinner on the screen) when rendered. You can prevent this template to show and use a custome view for your callback screen just by adding **template=false** prop to **Callback** component.
+  
+```
+import React from 'react'
+import { Callback } from 'auth0-react-login-control'
+
+const auth0Config = {
+  ...
+}
+
+function YourCallbackComponent() {
+  return (
+    <Callback
+      config={auth0Config}
+      template={false}
+    />
+  )
+}
+
+export default CallbackComponent
 ```
     
 &nbsp;
